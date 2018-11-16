@@ -1,7 +1,7 @@
 // Creating map object
 var myMap = L.map("map", {
     center: [15.552727, 48.516388],
-    zoom: 11
+    zoom: 6
 });
 
 //Adding tile layer
@@ -13,13 +13,13 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: API_KEY
 }).addTo(myMap);
 
-// // link to GeoJSON
-// var geojson;
+// link to GeoJSON
+var geojson;
 
-// d3.json("static/yem_govern.json", function(data) {
-//     // Create a new choropleth layer
-    
+d3.json("static/yem_govern.json", function(data) {
+    // Create a new choropleth layer
+    geojson = L.choropleth(data).addTo(myMap);
 
-//         //Define what property in the features to use
-//     })
-// })
+    console.log(geojson.options.limits);
+
+});
