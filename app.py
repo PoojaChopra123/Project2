@@ -1,14 +1,8 @@
 #import the Flask class from the flask module
-from flask import Flask, render_template, redirect
-from flask_pymongo import flask_pymongo
-import scrape_nyt
+from flask import Flask, render_template
 
 #create the application object
-app = Flask(__name__)
-
-# Use flask_pymongo to set up mongo connection
-app.config["MONGO_URI"] = "mongodb://localhost:27017/yemen_app"
-mongo = PyMongo(app)
+app = Flask(__name__, static_url_path='/static')
 
 # use decoratoes to link the function to a url
 @app.route('/')
