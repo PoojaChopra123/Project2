@@ -20,6 +20,30 @@ d3.json("static/yem_govern.json", function(data) {
     // Create a new choropleth layer
     geojson = L.choropleth(data).addTo(myMap);
 
-    console.log(geojson.options.limits);
+    cholera = L.choropleth(data, {
 
+        // Define what  property in the features to use
+        valueProperty: "cases",
+
+        // Set color scale
+        scale: ["#ffffb2", "#b10026"],
+
+        // Number of breaks in step range
+        steps: 10,
+
+        // q for quartile, e for equidistant, k for k-means
+        mode: "q",
+        style: {
+            // Border color
+            color: "#fff",
+            weight: 1,
+            fillOpacity: 0.8
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.name_en + ", " + feature.properties.name_ar + "<br>Total Number of Cholera Cases (Feb 2018):<br>" + feature.properties.cases);
+        }
+    }).addTo(myMap);
+    
 });
+
+
