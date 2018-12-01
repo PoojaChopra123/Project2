@@ -13,6 +13,9 @@
 #usamap {
     height:500px;
 }
+#maptext {
+    font-size: 36pt;
+}
 body {
 font-family: 'Quicksand', sans-serif;
 }

@@ -1,7 +1,7 @@
 // Create a map object
 var usabombMap = L.map("usamap", {
-  center: [15.05, 48.5],
-  zoom: 7
+  center: [15.552727, 48.516388],
+  zoom: 6
 });
 
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -66,7 +66,7 @@ for (var i = 0; i < cities.length; i++) {
   L.circle(cities[i].location, {
     fillOpacity: 0.75,
     color: "red",
-    fillColor: "purple",
+    fillColor: "orange",
     // Setting our circle's radius equal to the output of our markerSize function
     // This will make our marker's size proportionate to its population
     radius: markerSize(cities[i].USairstrikes)
