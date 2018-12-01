@@ -1,6 +1,6 @@
 var myairstrikeMap = L.map("airstrikeMap", {
     center: [15.552727, 48.516388],
-    zoom: 6
+    zoom: 7
 });
   
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -38,8 +38,8 @@ d3.csv("static/data/Airstrike2.csv", function(error, airstrikeData) {
         minOpacity: 0.05, 
         maxZoom: 18, 
         radius: 20, 
-        blur: 15, 
-        gradient: {0.1: 'yellow', 0.3: 'orange', 0.5: 'red'}, 
+        blur: 30, 
+        gradient: {0.3: 'yellow', 0.4: 'orange', 0.5: 'red'}, 
         maxZoom:14
     }).addTo(myairstrikeMap);
   
