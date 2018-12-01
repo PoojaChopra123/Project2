@@ -10,6 +10,9 @@
 #riotMap {
     height: 500px;
 }
+#usamap {
+    height:500px;
+}
 body {
 font-family: 'Quicksand', sans-serif;
 }
