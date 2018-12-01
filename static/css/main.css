@@ -2,10 +2,13 @@
     margin-top: 100px;
 }
 #map {
-    height: 100%;
+    height: 500px;
 }
 #airstrikeMap {
-    height: 100%;
+    height: 500px;
+}
+#riotMap {
+    height: 500px;
 }
 body {
 font-family: 'Quicksand', sans-serif;
