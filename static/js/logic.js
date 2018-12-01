@@ -4,7 +4,6 @@ var myMap = L.map("map", {
     zoom: 6
 });
 
-//Adding tile layer
 // Adding tile layer
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
@@ -16,7 +15,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 // link to GeoJSON
 var geojson;
 
-d3.json("static/yem_govern.json", function(data) {
+d3.json("static/data/yem_govern.json", function(data) {
     // Create a new choropleth layer
     geojson = L.choropleth(data).addTo(myMap);
 

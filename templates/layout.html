@@ -13,6 +13,11 @@
         crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
+    <!--AON Scroll Animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Google Font - Quicksand-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <!-- d3 JavaScript -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -45,6 +50,9 @@
     </div>
 
 <!-- Optional JavaScript -->
+
+<!--AON JavsScrip-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -55,10 +63,17 @@
 
 <!-- Leaflet-Choropleth JavaScript -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/choropleth.js') }}"></script>
+<!-- Leaflet heatmap plugin-->
+<script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
 <!-- API key -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
 <!-- JS -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/airstrike_logic.js') }}"></script>
+
+<script>
+    AOS.init();
+</script>
 
 </body>
 
