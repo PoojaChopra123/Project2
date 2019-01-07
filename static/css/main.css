@@ -1,3 +1,21 @@
-.jumbotron {
+.display-4 {
     margin-top: 100px;
+}
+#map {
+    height: 500px;
+}
+#airstrikeMap {
+    height: 500px;
+}
+#riotMap {
+    height: 500px;
+}
+#usamap {
+    height:500px;
+}
+#maptext {
+    font-size: 36pt;
+}
+body {
+font-family: 'Quicksand', sans-serif;
 }
